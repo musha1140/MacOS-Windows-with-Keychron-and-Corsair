@@ -1,4 +1,3 @@
-"""
 # Keychron-Corsair-Dual-Compatibility
 
 **How to pair BOTH keyboard and mouse to seamlessly use your Mac and Windows within a touch of a switch**
@@ -208,6 +207,10 @@ If you prefer to skip the detailed steps and just run scripts to automate the se
 - It includes placeholder comments for configuring devices and automating configuration on startup.
 - It verifies the display settings.
 - It includes a placeholder comment for validating the configuration.
+
+**How to pair BOTH keyboard and mouse to seamlessly use your Mac and Windows within a touch of a switch**
+
+![Workflow Diagram](https://github.com/musha1140/MacOS-Windows-with-Keychron-and-Corsair/blob/main/images/keysair.drawio.png)
 
 By following these steps, you leverage the power of modern input device configuration tools, cross-platform firmware customization, and peripheral connectivity technologies. This ensures your Keychron Q1 Pro keyboard and SCIMITAR RGB ELITE mouse are correctly set up and configured for use on both macOS and Windows, providing a seamless and consistent experience when switching between operating systems.
 ## Hardware Used 
