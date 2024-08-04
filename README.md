@@ -4,7 +4,7 @@
 
 ' How to pair BOTH keyboard and mouse to seamlessly use your Mac and Windows within a touch of a switch
 
-' ![SCIMITAR RGB ELITE Optical MOBA/MMO Gaming Mouse](images/CORSAIR.jpg)
+' ![SCIMITAR RGB ELITE Optical MOBA/MMO Gaming Mouse](images/CORSAIR.jepg)
 ' (https://www.corsair.com/us/en/p/gaming-mouse/ch-9304211-na/scimitar-rgb-elite-optical-moba-mmo-gaming-mouse-ch-9304211-na)
 
 ' ![Keychron Q1 Pro](images/Screenshot 2024-08-04 161212.png)
