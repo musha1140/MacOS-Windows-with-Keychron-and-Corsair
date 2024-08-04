@@ -5,7 +5,7 @@
 <img src="images/corsair.png" alt="SCIMITAR RGB ELITE Optical MOBA/MMO Gaming Mouse" width="300" height="300">
 [SCIMITAR RGB ELITE Optical MOBA/MMO Gaming Mouse](https://www.corsair.com/us/en/p/gaming-mouse/ch-9304211-na/scimitar-rgb-elite-optical-moba-mmo-gaming-mouse-ch-9304211-na)
 
-<img src="images/keychron.png" alt="Keychron Q1 Pro" width="300" height="300">
+<img src="images/keychron.png" alt="Keychron Q1 Pro" width="600" height="300">
 [Keychron Q1 Pro](https://www.keychron.com/products/keychron-q1)
 
 <img src="images/dell.png" alt="Dell Performance Dock WD19DCS" width="300" height="300">
