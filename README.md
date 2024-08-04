@@ -166,31 +166,18 @@ Automate device configuration with a script on macOS to ensure settings are appl
 
 ## Explanation:
 
-**macOS Script:**
+# Keychron-Corsair-Dual-Compatibility
 
-- The script installs necessary tools using Homebrew.
-- It connects the devices and verifies their connection using `xinput list`.
-- It creates and makes executable a configuration script (`configure_devices.sh`).
-- It adds the configuration script to `.zshrc` for automatic execution on startup.
-- It verifies the display settings.
-- It runs the configuration script to validate the configuration.
+**How to pair BOTH keyboard and mouse to seamlessly use your Mac and Windows within a touch of a switch**
 
-**Windows Script:**
-
-- The script installs necessary software (Corsair iCUE and QMK Toolbox) using PowerShell.
-- It connects the devices and verifies their connection using `Get-PnpDevice`.
-- It includes placeholder comments for configuring devices and automating configuration on startup.
-- It verifies the display settings.
-- It includes a placeholder comment for validating the configuration.
-
-By following these steps, you leverage the power of modern input device configuration tools, cross-platform firmware customization, and peripheral connectivity technologies. This ensures your Keychron Q1 Pro keyboard and SCIMITAR RGB ELITE mouse are correctly set up and configured for use on both macOS and Windows, providing a seamless and consistent experience when switching between operating systems.
+![Workflow Diagram](https://github.com/musha1140/MacOS-Windows-with-Keychron-and-Corsair/blob/main/images/keysair.drawio.png)
 
 ## Hate iCUE? Same here. Follow these steps to just not use it:
 
 If you prefer to skip the detailed steps and just run scripts to automate the setup without using iCUE, use the following scripts:
 
 - [Script for macOS](https://github.com/musha1140/Keychron-Corsair-dual-Combability/blob/main/macos_configurenocue.sh)
-- [Script for Windows](https://github.com/musha1140/Keychron-Corsair-dual-Combability/blob/main/windows_configurenocue.bat)
+- [Script for Windows](https://github.com/musha1140/Keychron-Corsair-dual-Combability/blob/main/windows_setupnocue.sh.bat)
 
 ## macOS Script:
 
@@ -210,7 +197,8 @@ If you prefer to skip the detailed steps and just run scripts to automate the se
 - It includes a placeholder comment for validating the configuration.
 
 By following these steps, you leverage the power of modern input device configuration tools, cross-platform firmware customization, and peripheral connectivity technologies. This ensures your Keychron Q1 Pro keyboard and SCIMITAR RGB ELITE mouse are correctly set up and configured for use on both macOS and Windows, providing a seamless and consistent experience when switching between operating systems.
-## Hardware Used 
+
+## Hardware Used
 
 - [Corsair](https://www.corsair.com/) for the SCIMITAR RGB ELITE Optical MOBA/MMO Gaming Mouse.
 - [Keychron](https://www.keychron.com/) for the Keychron Q1 Pro.
@@ -219,4 +207,5 @@ By following these steps, you leverage the power of modern input device configur
 - [Cable Matters](https://www.cablematters.com/) for the DisplayPort to DisplayPort Cable.
 - [Homebrew](https://brew.sh/) for package management on macOS.
 - [QMK Toolbox](https://qmk.fm/toolbox/) for keyboard firmware configuration.
-- [Corsair iCUE](https://www.corsair.com/us/en/icue) for mouse configuration.
+By following these steps, you leverage the power of modern input device configuration tools, cross-platform firmware customization, and peripheral connectivity technologies. This ensures your Keychron Q1 Pro keyboard and SCIMITAR RGB ELITE mouse are correctly set up and configured for use on both macOS and Windows, providing a seamless and consistent experience when switching between operating systems.
+
