@@ -155,11 +155,26 @@ Automate device configuration with a script on macOS to ensure settings are appl
 - [Script for macOS](https://github.com/musha1140/Keychron-Corsair-dual-Combability/blob/main/macos_configure.sh)
 - [Script for Windows](https://github.com/musha1140/Keychron-Corsair-dual-Combability/blob/main/windows_configure.bat)
 
-## Conclusion
+## Explanation:
+**macOS Script:**
 
-By following these steps, you leverage the power of modern input device configuration tools, cross-platform firmware customization, and peripheral connectivity technologies. This ensures your Keychron Q1 Pro keyboard and SCIMITAR RGB ELITE mouse are correctly set up and configured for use on both macOS and Windows, providing a seamless and consistent experience when switching between operating systems.
+The script installs necessary tools using Homebrew.
+It connects the devices and verifies their connection using xinput list.
+It creates and makes executable a configuration script (configure_devices.sh).
+It adds the configuration script to .zshrc for automatic execution on startup.
+It verifies the display settings.
+It runs the configuration script to validate the configuration.
+Windows Script:
 
-## Credits
+The script installs necessary software (Corsair iCUE and QMK Toolbox) using PowerShell.
+It connects the devices and verifies their connection using Get-PnpDevice.
+It includes placeholder comments for configuring devices and automating configuration on startup.
+It verifies the display settings.
+It includes a placeholder comment for validating the configuration.
+
+By following these steps, you leverage the power of modern input device configuration tools, cross-platform firmware customization, and peripheral connectivity technologies. This ensures your Keychron Q1(2,3) Pro keyboard and SCIMITAR RGB ELITE Corsair (OR Anyg other mouse) mouse are correctly set up and configured for use on both macOS and Windows, providing a seamless and consistent experience when switching between operating systems.
+
+## HARDWARE USED 
 
 - [Corsair](https://www.corsair.com/) for the SCIMITAR RGB ELITE Optical MOBA/MMO Gaming Mouse.
 - [Keychron](https://www.keychron.com/) for the Keychron Q1 Pro.
