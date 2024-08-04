@@ -150,8 +150,8 @@ Automate device configuration with a script on macOS to ensure settings are appl
 
 ## Scripts
 
-- [Script for macOS](https://github.com/musha1140/Keychron-Corsair-dual-Combability/blob/main/macos_setup.sh)
-- [Script for Windows](https://github.com/musha1140/Keychron-Corsair-dual-Combability/blob/main/windows_setup.bat)
+- [Script for macOS](https://github.com/musha1140/Keychron-Corsair-dual-Combability/blob/main/macos_configure.sh)
+- [Script for Windows](https://github.com/musha1140/Keychron-Corsair-dual-Combability/blob/main/windows_configure.bat)
 
 ## Conclusion
 
