@@ -42,19 +42,19 @@ If you prefer to skip the detailed steps and just run scripts to automate the se
 ### Install Required Tools:
 
 **Homebrew:**
-\`\`\`sh
+```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-\`\`\`
+```
 
 **XQuartz:**
-\`\`\`sh
+```sh
 brew install --cask xquartz
-\`\`\`
+```
 
 **xinput:**
-\`\`\`sh
+```sh
 brew install xinput
-\`\`\`
+```
 
 ### Connect Devices:
 
@@ -66,20 +66,20 @@ brew install xinput
 ### Verify Device Connection:
 
 Use Terminal to list all connected input devices:
-\`\`\`sh
+```sh
 xinput list
-\`\`\`
+```
 
 ### Create Configuration Script:
 
 Create and make the script executable:
-\`\`\`sh
+```sh
 nano configure_devices.sh
 chmod +x configure_devices.sh
-\`\`\`
+```
 
 Add the following content to the script:
-\`\`\`sh
+```sh
 cat << 'EOF' > configure_devices.sh
 #!/bin/bash
 
@@ -95,16 +95,16 @@ xinput set-prop $SCIMITAR_ID "Device Accel Profile" -1
 
 echo "Devices configured successfully."
 EOF
-\`\`\`
+```
 
 ### Automate Configuration on Startup:
 
 Add script execution to your shell profile:
-\`\`\`sh
+```sh
 nano ~/.zshrc
 echo "~/path/to/configure_devices.sh" >> ~/.zshrc
 source ~/.zshrc
-\`\`\`
+```
 
 ### Verify Display Settings:
 
