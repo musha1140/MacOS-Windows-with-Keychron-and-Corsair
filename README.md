@@ -8,7 +8,7 @@
 <img src="images/keychron.png" alt="Keychron Q1 Pro" width="600" height="300">
 [Keychron Q1 Pro](https://www.keychron.com/products/keychron-q1)
 
-<img src="images/dell.png" alt="Dell Performance Dock WD19DCS" width="300" height="300">
+<img src="images/dell.png" alt="Dell Performance Dock WD19DCS" width="500" height="300">
 [Dell Performance Dock WD19DCS](https://www.dell.com/en-us/shop/dell-performance-dock-wd19dcs/apd/210-azbn/docks)
 
 <img src="images/usbctohdmi.png" alt="C2G 6ft USB-C to HDMI Adapter Cable" width="300" height="300">
