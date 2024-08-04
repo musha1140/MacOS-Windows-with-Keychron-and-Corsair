@@ -21,10 +21,9 @@
 
 This guide provides a step-by-step approach to setting up your Keychron Q1 Pro wireless keyboard (running QMKVIA) and SCIMITAR RGB ELITE Optical MOBA/MMO Gaming Mouse through a Dell USB Dock on both macOS and Windows.
 
-If you prefer to skip the detailed steps and just run scripts to automate the setup, use the following scripts:
+If you prefer to skip the detailed steps and just run scripts to automate the setup, use the following scripts at the bottom and skip this below.
 
-- [Script for macOS](https://github.com/musha1140/Keychron-Corsair-dual-Combability/blob/main/macos_setup.sh)
-- [Script for Windows](https://github.com/musha1140/Keychron-Corsair-dual-Combability/blob/main/windows_setup.bat)
+-
 
 ## Steps for macOS
 
