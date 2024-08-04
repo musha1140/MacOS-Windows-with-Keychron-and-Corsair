@@ -1,121 +1,148 @@
-# Keychron-Corsair-dual-Combability
-**How to pair BOTH keyboard and mouse to seamlessly use your mac and windows within a touch of a switch 
+' README.md
 
+' Keychron-Corsair-Dual-Compatibility
 
-https://www.corsair.com/us/en/p/gaming-mouse/ch-9304211-na/scimitar-rgb-elite-optical-moba-mmo-gaming-mouse-ch-9304211-na
-https://www.keychron.com/products/keychron-q1
-https://www.dell.com/en-us/shop/dell-performance-dock-wd19dcs/apd/210-azbn/docks
-# Device Configuration Setup for macOS and Windows
+' How to pair BOTH keyboard and mouse to seamlessly use your Mac and Windows within a touch of a switch
 
-# This guide provides a step-by-step approach to setting up your Keychron Q1 Pro wireless keyboard (running QMKVIA) and SCIMITAR RGB ELITE Optical MOBA/MMO Gaming Mouse through a Dell USB Dock on both macOS and Windows.
+' ![SCIMITAR RGB ELITE Optical MOBA/MMO Gaming Mouse](images/CORSAIR.jpg)
+' (https://www.corsair.com/us/en/p/gaming-mouse/ch-9304211-na/scimitar-rgb-elite-optical-moba-mmo-gaming-mouse-ch-9304211-na)
 
-## Steps for macOS
+' ![Keychron Q1 Pro](images/Screenshot 2024-08-04 161212.png)
+' (https://www.keychron.com/products/keychron-q1)
 
-### Install Required Tools:
+' ![Dell Performance Dock WD19DCS](images/Screenshot 2024-08-04 161256.png)
+' (https://www.dell.com/en-us/shop/dell-performance-dock-wd19dcs/apd/210-azbn/docks)
 
-# Homebrew:
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+' ![C2G 6ft USB-C to HDMI Adapter Cable](images/Screenshot 2024-08-04 161241.png)
+' (https://www.dell.com/en-us/shop/c2g-6ft-usb-c-to-hdmi-adapter-cable-4k-60hz/apd/aa243620/pc-accessories)
 
-# XQuartz:
-brew install --cask xquartz
+' ![DisplayPort to DisplayPort Cable](images/Screenshot 2024-08-04 161324.png)
+' (https://www.amazon.com/Cable-Matters-DisplayPort-DisplayPort-6-Feet/dp/B005H3Q59U/)
 
-# xinput:
-brew install xinput
+' Device Configuration Setup for macOS and Windows
 
-### Connect Devices:
+' This guide provides a step-by-step approach to setting up your Keychron Q1 Pro wireless keyboard (running QMKVIA) and 
+' SCIMITAR RGB ELITE Optical MOBA/MMO Gaming Mouse through a Dell USB Dock on both macOS and Windows.
 
-# - Connect the USB-C to HDMI adapter to the Dell Dock.
-# - Connect the DisplayPort output from the dock to your monitor.
-# - Ensure the Keychron Q1 Pro is connected via Bluetooth or USB.
-# - Connect the SCIMITAR RGB ELITE mouse to a USB port on the Dell Dock.
+' Steps for macOS
 
-### Verify Device Connection:
+' Install Required Tools:
 
-# Use Terminal to list all connected input devices:
-xinput list
+' Homebrew:
+' Run the following command in Terminal to install Homebrew
+' /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-### Create Configuration Script:
+' XQuartz:
+' Run the following command in Terminal to install XQuartz
+' brew install --cask xquartz
 
-# Create and make the script executable:
-nano configure_devices.sh
-chmod +x configure_devices.sh
+' xinput:
+' Run the following command in Terminal to install xinput
+' brew install xinput
 
-# Add the following content to the script:
-cat << 'EOF' > configure_devices.sh
-#!/bin/bash
+' Connect Devices:
 
-# Find the device IDs
-KEYCHRON_ID=$(xinput list | grep 'Keychron Q1 Pro' | awk '{print $6}' | sed 's/id=//')
-SCIMITAR_ID=$(xinput list | grep 'SCIMITAR RGB ELITE' | awk '{print $6}' | sed 's/id=//')
+' - Connect the USB-C to HDMI adapter to the Dell Dock.
+' - Connect the DisplayPort to DisplayPort cable from the dock to your monitor.
+' - Ensure the Keychron Q1 Pro is connected via Bluetooth or USB.
+' - Connect the SCIMITAR RGB ELITE mouse to a USB port on the Dell Dock.
 
-# Configure Keychron Q1 Pro
-xinput set-prop $KEYCHRON_ID "Device Accel Profile" 1
+' Verify Device Connection:
 
-# Configure SCIMITAR RGB ELITE Mouse
-xinput set-prop $SCIMITAR_ID "Device Accel Profile" -1
+' Use Terminal to list all connected input devices:
+' xinput list
 
-echo "Devices configured successfully."
-EOF
+' Create Configuration Script:
 
-### Automate Configuration on Startup:
+' Create and make the script executable:
+' nano configure_devices.sh
+' chmod +x configure_devices.sh
 
-# Add script execution to your shell profile:
-nano ~/.zshrc
-echo "~/path/to/configure_devices.sh" >> ~/.zshrc
-source ~/.zshrc
+' Add the following content to the script:
+' cat << 'EOF' > configure_devices.sh
+' #!/bin/bash
+' 
+' # Find the device IDs
+' KEYCHRON_ID=$(xinput list | grep 'Keychron Q1 Pro' | awk '{print $6}' | sed 's/id=//')
+' SCIMITAR_ID=$(xinput list | grep 'SCIMITAR RGB ELITE' | awk '{print $6}' | sed 's/id=//')
+' 
+' # Configure Keychron Q1 Pro
+' xinput set-prop $KEYCHRON_ID "Device Accel Profile" 1
+' 
+' # Configure SCIMITAR RGB ELITE Mouse
+' xinput set-prop $SCIMITAR_ID "Device Accel Profile" -1
+' 
+' echo "Devices configured successfully."
+' EOF
 
-### Verify Display Settings:
+' Automate Configuration on Startup:
 
-# Go to System Preferences > Displays and ensure your monitor is detected.
+' Add script execution to your shell profile:
+' nano ~/.zshrc
+' echo "~/path/to/configure_devices.sh" >> ~/.zshrc
+' source ~/.zshrc
 
-## Steps for Windows
+' Verify Display Settings:
 
-### Install Required Software:
+' Go to System Preferences > Displays and ensure your monitor is detected.
 
-# Corsair iCUE: Download and install from https://www.corsair.com/us/en/icue.
-# QMK Toolbox: Download and install from https://qmk.fm/toolbox/.
+' Steps for Windows
 
-### Connect Devices:
+' Install Required Software:
 
-# - Connect the USB-C to HDMI adapter to the Dell Dock.
-# - Connect the DisplayPort output from the dock to your monitor.
-# - Ensure the Keychron Q1 Pro is connected via Bluetooth or USB.
-# - Connect the SCIMITAR RGB ELITE mouse to a USB port on the Dell Dock.
+' - Corsair iCUE: Download and install from Corsair iCUE.
+' - QMK Toolbox: Download and install from QMK Toolbox.
 
-### Install and Configure Drivers:
+' Connect Devices:
 
-# Keychron Q1 Pro: Use QMK Toolbox to configure the keyboard if needed.
-# SCIMITAR RGB ELITE Mouse: Use Corsair iCUE to configure the mouse settings (DPI, macros, RGB lighting).
+' - Connect the USB-C to HDMI adapter to the Dell Dock.
+' - Connect the DisplayPort to DisplayPort cable from the dock to your monitor.
+' - Ensure the Keychron Q1 Pro is connected via Bluetooth or USB.
+' - Connect the SCIMITAR RGB ELITE mouse to a USB port on the Dell Dock.
 
-### Verify Device Connection:
+' Install and Configure Drivers:
 
-# Open Device Manager and ensure both devices are recognized.
-# If using Bluetooth, go to Settings > Devices > Bluetooth & other devices to ensure the Keychron Q1 Pro is paired.
+' - Keychron Q1 Pro: Use QMK Toolbox to configure the keyboard if needed.
+' - SCIMITAR RGB ELITE Mouse: Use Corsair iCUE to configure the mouse settings (DPI, macros, RGB lighting).
 
-### Display Settings:
+' Verify Device Connection:
 
-# Right-click on the desktop and select "Display settings".
-# Ensure your monitor is detected and adjust settings as needed.
+' Open Device Manager and ensure both devices are recognized.
+' If using Bluetooth, go to Settings > Devices > Bluetooth & other devices to ensure the Keychron Q1 Pro is paired.
 
-## Unified Workflow for Both Operating Systems
+' Display Settings:
 
-### Cross-Platform Software:
+' Right-click on the desktop and select "Display settings".
+' Ensure your monitor is detected and adjust settings as needed.
 
-# QMK Toolbox and Corsair iCUE are available for both macOS and Windows. Use these tools to configure your devices consistently across both systems.
+' Unified Workflow for Both Operating Systems
 
-### Configuration Synchronization:
+' Cross-Platform Software:
 
-# Keychron Q1 Pro: Ensure the QMK firmware configuration is saved and flashed using QMK Toolbox, which will work on both operating systems.
-# SCIMITAR RGB ELITE Mouse: Save profiles in Corsair iCUE, which can be imported/exported between systems if needed.
+' QMK Toolbox and Corsair iCUE are available for both macOS and Windows. Use these tools to configure your devices consistently across both systems.
 
-### Physical Connections:
+' Configuration Synchronization:
 
-# Ensure the Dell Dock is properly connected to your monitor via DisplayPort and the USB-C to HDMI adapter is correctly connected.
-# Check device connections each time you switch between macOS and Windows.
+' - Keychron Q1 Pro: Ensure the QMK firmware configuration is saved and flashed using QMK Toolbox, which will work on both operating systems.
+' - SCIMITAR RGB ELITE Mouse: Save profiles in Corsair iCUE, which can be imported/exported between systems if needed.
 
-### Script Automation (macOS):
+' Physical Connections:
 
-# Automate device configuration with a script on macOS to ensure settings are applied each time you boot.
+' Ensure the Dell Dock is properly connected to your monitor via DisplayPort and the USB-C to HDMI adapter is correctly connected.
+' Check device connections each time you switch between macOS and Windows.
 
-# Script for macOS # : windows_configure.bat [In repo]
-# Windows Script # :  macos_configure.sh [In repo]
+' Script Automation (macOS):
+
+' Automate device configuration with a script on macOS to ensure settings are applied each time you boot.
+
+' Scripts
+
+' - Script for macOS
+' (https://github.com/musha1140/Keychron-Corsair-dual-Combability/blob/main/macos_configure.sh)
+' - Script for Windows
+' (https://github.com/musha1140/Keychron-Corsair-dual-Combability/blob/main/windows_configure.bat)
+
+' Conclusion
+
+' By following these steps, you leverage the power of modern input device configuration tools, cross-platform firmware customization, and peripheral connectivity technologies. 
+' This ensures your Keychron Q1 Pro keyboard and SCIMITAR RGB ELITE mouse are correctly set up and configured for use on both macOS and Windows, providing a seamless and consistent experience when switching between operating systems.
