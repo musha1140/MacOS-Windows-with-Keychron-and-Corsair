@@ -30,19 +30,19 @@ If you prefer to skip the detailed steps and just run scripts to automate the se
 ### Install Required Tools:
 
 **Homebrew:**
-\```
+```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-\```
+```
 
 **XQuartz:**
-\```
+```
 brew install --cask xquartz
-\```
+```
 
 **xinput:**
-\```
+```
 brew install xinput
-\```
+```
 
 ### Connect Devices:
 
@@ -54,45 +54,48 @@ brew install xinput
 ### Verify Device Connection:
 
 Use Terminal to list all connected input devices:
-\```
+```
 xinput list
-\```
+```
 
 ### Create Configuration Script:
 
 Create and make the script executable:
-\```
+```
 nano configure_devices.sh
 chmod +x configure_devices.sh
-\```
+```
 
 Add the following content to the script:
-\```
+```
 cat << 'EOF' > configure_devices.sh
 #!/bin/bash
+```
 
 # Find the device IDs
-KEYCHRON_ID=$(xinput list | grep 'Keychron Q1 Pro' | awk '{print $6}' | sed 's/id=//')
+```KEYCHRON_ID=$(xinput list | grep 'Keychron Q1 Pro' | awk '{print $6}' | sed 's/id=//')
 SCIMITAR_ID=$(xinput list | grep 'SCIMITAR RGB ELITE' | awk '{print $6}' | sed 's/id=//')
-
+```
 # Configure Keychron Q1 Pro
-xinput set-prop $KEYCHRON_ID "Device Accel Profile" 1
+```xinput set-prop $KEYCHRON_ID "Device Accel Profile" 1```
 
 # Configure SCIMITAR RGB ELITE Mouse
+```
 xinput set-prop $SCIMITAR_ID "Device Accel Profile" -1
 
 echo "Devices configured successfully."
 EOF
-\```
+```
 
 ### Automate Configuration on Startup:
 
 Add script execution to your shell profile:
-\```
+```
 nano ~/.zshrc
 echo "~/path/to/configure_devices.sh" >> ~/.zshrc
 source ~/.zshrc
-\```
+\
+```
 
 ### Verify Display Settings:
 
