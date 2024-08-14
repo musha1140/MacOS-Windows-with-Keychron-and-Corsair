@@ -47,19 +47,19 @@ If you prefer to skip the detailed steps and just run scripts to automate the se
 ### Install Required Tools:
 
 **Homebrew:**
-~sh
+~```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-~
+~```
 
 **XQuartz:**
-~sh
+~```
 brew install --cask xquartz
-~
+~```
 
 **xinput:**
-~sh
+~```
 brew install xinput
-~
+~```
 
 **Connect Devices:**
 
@@ -71,20 +71,21 @@ brew install xinput
 **Verify Device Connection:**
 
 Use Terminal to list all connected input devices:
-~sh
+~```
 xinput list
-~
+~```
 
 **Create Configuration Script:**
 
 Create and make the script executable:
-~sh
+~```
 nano configure_devices.sh
 chmod +x configure_devices.sh
-~
+~```
 
 Add the following content to the script:
-~sh
+```
+~
 cat << 'EOF' > configure_devices.sh
 #!/bin/bash
 
@@ -101,6 +102,7 @@ xinput set-prop $SCIMITAR_ID "Device Accel Profile" -1
 echo "Devices configured successfully."
 EOF
 ~
+```
 
 **Automate Configuration on Startup:**
 
@@ -188,11 +190,11 @@ Automate device configuration with a script on macOS to ensure settings are appl
 - It verifies the display settings.
 - It includes a placeholder comment for validating the configuration.
 
-**How to pair BOTH keyboard and mouse to seamlessly use your Mac and Windows within a touch of a switch**
+**Drawio to pair BOTH keyboard and mouse to seamlessly use your Mac and Windows within a touch of a switch**
 
 ![Workflow Diagram](https://github.com/musha1140/MacOS-Windows-with-Keychron-and-Corsair/blob/main/images/keysair.drawio.png)
 
-By following these steps, you leverage the power of modern input device configuration tools, cross-platform firmware customization, and peripheral connectivity technologies. This ensures your **Corsair replacement keyboard** and SCIMITAR RGB ELITE mouse are correctly set up and configured for use on both macOS and Windows, providing a seamless and consistent experience when switching between operating systems.
+By following these steps, you leverage the power of modern input device configuration tools, cross-platform firmware customization, and peripheral connectivity technologies. This ensures your **Corsair replacement keyboard** --I HATE THE KEYCHRON Q1-- and Corsair SCIMITAR RGB ELITE mouse are correctly set up and configured for use on both macOS and Windows, providing a seamless and consistent experience when switching between operating systems.
 
 **Hardware Used**
 
